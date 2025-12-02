@@ -29,7 +29,7 @@ solve_aoc_01_part1(FileName, Out):-
 % I suspect that passing 0 will be a part of the next task,
 % so I'll build that in now.
 %
-% I suspect there's a mathematically quicker way of doing this, but
+% There's probably a mathematically quicker way of doing this, but
 % I can't be bothered to work it out at the moment.
 %
 % rotate_dial(?Direction, +Number, ?Start, ?Finish, -PassZero)
