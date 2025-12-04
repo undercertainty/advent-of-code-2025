@@ -35,7 +35,9 @@ invalid_id(Id):-
 	% Repeating pattern must be at least 1 long
 	append([P|Prefix], Rest, IdCodes),
 	repeating_pattern([P|Prefix], Rest),
-	!.% (Avoid multiple solutions in eg. 333333 -> 33+33+33 or 333+333)
+	% (Cut to avoid multiple solutions, such
+	% as 333333 -> 33+33+33 or 333+333)
+	!.
 
 repeating_pattern(Pattern, Pattern).
 repeating_pattern(Pattern, List):-
