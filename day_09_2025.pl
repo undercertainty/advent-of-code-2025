@@ -14,8 +14,7 @@
 :- use_module(library(yall)).
 :- use_module(library(apply)).
 
-:- dynamic tile_col/2.
-:- dynamic agenda/2.
+:- dynamic column/2.
 
 aoc_09_test_part1(Out):-
 	solve_aoc_09_part1("test_data/data_09_2025_test.txt", Out).
@@ -126,9 +125,7 @@ limits(Pairs, [[MinX, MinY], [MaxX, MaxY]]):-
 init(Pairs, FinalGrid):-
 	limits(Pairs, [[MinX, _MinY], [MaxX, _MaxY]]),
 	succ(GridMinX, MinX),
-	%succ(GridMinY, MinY),
 	succ(MaxX, GridMaxX),
-	%succ(MaxY, GridMaxY),
 	findall(X-[], between(GridMinX, GridMaxX, X), InitialGrid),
 	init(Pairs, InitialGrid, FinalGrid).
 
