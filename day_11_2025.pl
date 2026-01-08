@@ -5,16 +5,10 @@
 % :- table path/3.
 :- dynamic connected/2, node/1.
 
-:- set_prolog_flag(table_space, 8589934592).
-
 :- use_module(library(lists)).
 :- use_module(library(pairs)).
 :- use_module(library(readutil)).
 :- use_module(library(dcg/basics)).
-:- use_module(library(simplex)).
-:- use_module(library(gensym)).
-:- use_module(library(yall)).
-:- use_module(library(apply)).
 
 % I don't normally approve of this, but I'll assert the 
 % connections in the first instance. Makes the task a
